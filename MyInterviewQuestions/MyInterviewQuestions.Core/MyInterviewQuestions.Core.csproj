@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basis\AuditableEntity.cs" />
+    <Compile Include="Basis\BaseEntity.cs" />
+    <Compile Include="Basis\Check.cs" />
+    <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
