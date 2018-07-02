@@ -19,6 +19,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.WebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.Website", "MyInterviewQuestions.Website\MyInterviewQuestions.Website.csproj", "{0D321A2B-32A5-4EF2-88D1-C30761740578}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyInterviewQuestions-WebAdmin", "MyInterviewQuestions-WebAdmin\", "{0021F08F-29B7-4C17-BC18-A4835D68FD2B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59932"
+		Debug.AspNetCompiler.PhysicalPath = "MyInterviewQuestions-WebAdmin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59932\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59932"
+		Release.AspNetCompiler.PhysicalPath = "MyInterviewQuestions-WebAdmin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59932\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59932"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +65,10 @@ Global
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +79,7 @@ Global
 		{81125F2B-AD70-4A5D-BB41-4781A134D910} = {CDAAC8E0-2B64-4D3A-B43B-7DCAE0E24EAA}
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 		{0D321A2B-32A5-4EF2-88D1-C30761740578} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
+		{0021F08F-29B7-4C17-BC18-A4835D68FD2B} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E3DD816-AC4C-46AE-BAA3-843FE89AA5A1}
