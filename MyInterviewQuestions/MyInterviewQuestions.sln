@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.WebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.Website", "MyInterviewQuestions.Website\MyInterviewQuestions.Website.csproj", "{0D321A2B-32A5-4EF2-88D1-C30761740578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.WebAdmin", "MyInterviewQuestions.WebAdmin\MyInterviewQuestions.WebAdmin.csproj", "{6F3923A4-1F7B-4049-BC6F-6CFF061067FB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F3923A4-1F7B-4049-BC6F-6CFF061067FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F3923A4-1F7B-4049-BC6F-6CFF061067FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F3923A4-1F7B-4049-BC6F-6CFF061067FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F3923A4-1F7B-4049-BC6F-6CFF061067FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +55,6 @@ Global
 		{81125F2B-AD70-4A5D-BB41-4781A134D910} = {CDAAC8E0-2B64-4D3A-B43B-7DCAE0E24EAA}
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 		{0D321A2B-32A5-4EF2-88D1-C30761740578} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
-		{6F3923A4-1F7B-4049-BC6F-6CFF061067FB} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E3DD816-AC4C-46AE-BAA3-843FE89AA5A1}
