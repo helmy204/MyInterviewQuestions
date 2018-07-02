@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.WebApi", "MyInterviewQuestions.WebApi\MyInterviewQuestions.WebApi.csproj", "{E5C5A6DA-5103-4E49-9670-260BDC0256BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInterviewQuestions.Website", "MyInterviewQuestions.Website\MyInterviewQuestions.Website.csproj", "{0D321A2B-32A5-4EF2-88D1-C30761740578}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyInterviewQuestions-WebAdmin", "MyInterviewQuestions-WebAdmin\", "{0021F08F-29B7-4C17-BC18-A4835D68FD2B}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -37,6 +35,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyInterviewQuestions-WebAdm
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "59932"
+		SlnRelativePath = "MyInterviewQuestions-WebAdmin\"
 	EndProjectSection
 EndProject
 Global
@@ -61,10 +60,6 @@ Global
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D321A2B-32A5-4EF2-88D1-C30761740578}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0021F08F-29B7-4C17-BC18-A4835D68FD2B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
@@ -78,7 +73,6 @@ Global
 		{3BA222DC-D924-4B9C-AF82-5FF3A0772CEB} = {CDAAC8E0-2B64-4D3A-B43B-7DCAE0E24EAA}
 		{81125F2B-AD70-4A5D-BB41-4781A134D910} = {CDAAC8E0-2B64-4D3A-B43B-7DCAE0E24EAA}
 		{E5C5A6DA-5103-4E49-9670-260BDC0256BE} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
-		{0D321A2B-32A5-4EF2-88D1-C30761740578} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 		{0021F08F-29B7-4C17-BC18-A4835D68FD2B} = {A5229AA6-B39A-402D-BD34-52D9643B5AAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
