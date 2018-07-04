@@ -6,3 +6,9 @@
   <!-- (click) passes input value to add() and then clears the input -->
   <button (click)="add(questionTitle.value,questionBodyText.value); questionTitle.value=''; questionBodyText.value=''">Add</button>
 </div>
+
+<ul>
+  <li *ngFor="let question of questions">
+    {{ question.title }} | {{ question.bodyText }}
+  </li>
+</ul>

@@ -19,5 +19,21 @@ namespace MyInterviewQuestions.WebApi
 
             return question;
         }
+
+        public static List<QuestionModel> ToModels(this IEnumerable<Question> questions)
+        {
+            List<QuestionModel> questionModels = new List<QuestionModel>();
+
+            foreach (var question in questions)
+            {
+                questionModels.Add(new QuestionModel()
+                {
+                    Title = question.Title,
+                    BodyText = question.BodyText
+                });
+            }
+
+            return questionModels;
+        }
     }
 }

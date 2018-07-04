@@ -17,19 +17,8 @@ export class QuestionsComponent implements OnInit {
     this.getQuestions();
   }
 
-  add(title: string, bodyText: string): void {
-    title = title.trim();
-    bodyText = bodyText.trim();
-
-    if(!title){return;}
-
-    this.questionService.addQuestion({title,bodyText} as Question)
-      .subscribe( question => { this.questions.push(question);
-      });
-  }
-
   getQuestions():void {
     this.questionService.getQuestions()
-      .subscribe(questions => this.questions = questions);
+      .subscribe(questions => { this.questions = questions; console.log(this.questions)});
   }
 }

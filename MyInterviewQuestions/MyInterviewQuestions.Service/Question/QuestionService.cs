@@ -36,5 +36,11 @@ namespace MyInterviewQuestions.Service
 
             _questionRepository.Insert(question);
         }
+
+        public IEnumerable<Question> GetAll()
+        {
+            IEnumerable<Question> questions= _questionRepository.Table;
+            return questions.ToList();
+        }
     }
 }

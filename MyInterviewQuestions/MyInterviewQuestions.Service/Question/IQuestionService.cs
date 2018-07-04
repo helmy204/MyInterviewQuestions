@@ -14,5 +14,7 @@ namespace MyInterviewQuestions.Service
         /// </summary>
         /// <param name="question">Question</param>
         void Insert(Question question);
+
+        IEnumerable<Question> GetAll();
     }
 }

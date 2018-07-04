@@ -19,14 +19,6 @@ export class QuestionService {
 
   constructor(private http: HttpClient) { }
 
-   /** POST: add a new question to the server */
-   addQuestion(question: Question): Observable<Question> {
-     return this.http.post<Question>(this.questionsUrl,question,httpOptions)
-      .pipe(
-        catchError(this.handleError<Question>('addQuestion'))
-      );
-   }
-
    /** GET questions from the server */
   getQuestions():Observable<Question[]> {
     return this.http.get<Question[]>(this.questionsUrl)

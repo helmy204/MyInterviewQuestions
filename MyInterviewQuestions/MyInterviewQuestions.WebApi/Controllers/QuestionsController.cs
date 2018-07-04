@@ -27,10 +27,17 @@ namespace MyInterviewQuestions.WebApi.Controllers
                 _questionService.Insert(question);
                 return HttpStatusCode.OK;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return HttpStatusCode.InternalServerError;
             }
+        }
+
+        public List<QuestionModel> Get()
+        {
+            IEnumerable<Question> questions = _questionService.GetAll();
+            List<QuestionModel> lstQuestions = questions.ToModels();
+            return lstQuestions;
         }
     }
 }
