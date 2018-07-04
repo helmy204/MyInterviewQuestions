@@ -29,6 +29,8 @@ namespace MyInterviewQuestions.Service
         {
             Check.ArgumentNotNull<Question>("question", question);
 
+            question.UserId = 1;
+
             question.InsertedOn = DateTime.Now;
             question.InsertedBy = 1;
 

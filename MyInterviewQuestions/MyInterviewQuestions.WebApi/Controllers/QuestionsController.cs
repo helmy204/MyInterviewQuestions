@@ -27,7 +27,7 @@ namespace MyInterviewQuestions.WebApi.Controllers
                 _questionService.Insert(question);
                 return HttpStatusCode.OK;
             }
-            catch 
+            catch(Exception ex) 
             {
                 return HttpStatusCode.InternalServerError;
             }

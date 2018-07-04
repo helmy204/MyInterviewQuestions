@@ -1,0 +1,8 @@
+<h2>My Questions</h2>
+
+<div>
+  <label>Question title: <input #questionTitle /></label>
+  <label>Question body: <input #questionBodyText /></label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(questionTitle.value,questionBodyText.value); questionTitle.value=''; questionBodyText.value=''">Add</button>
+</div>
