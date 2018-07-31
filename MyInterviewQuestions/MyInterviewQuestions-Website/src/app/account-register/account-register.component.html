@@ -1,0 +1,11 @@
+<h2>Register</h2>
+<div>
+  <div><label>UserName: <input #userName></label></div>
+  <div><label>Password: <input #password></label></div>
+  <div><label>Confirm Password: <input #confirmPassword></label></div>
+  <div>
+    <button (click)="register(userName.value,password.value,confirmPassword.value); userName.value=password.value=confirmPassword.value='';">
+      Register
+    </button>
+  </div>
+</div>

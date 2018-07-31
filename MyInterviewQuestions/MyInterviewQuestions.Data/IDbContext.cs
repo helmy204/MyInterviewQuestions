@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyInterviewQuestions.Data
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         /// <summary>
         /// Get DbSet
@@ -22,5 +22,7 @@ namespace MyInterviewQuestions.Data
         /// </summary>
         /// <returns></returns>
         int SaveChanges();
+
+        Task<int> SaveChangesAsync();
     }
 }

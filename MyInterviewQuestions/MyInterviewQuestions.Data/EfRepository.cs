@@ -163,6 +163,34 @@ namespace MyInterviewQuestions.Data
             throw new NotImplementedException();
         }
 
+        public async Task InsertAsync(T entity)
+        {
+            try
+            {
+                if (entity == null)
+                {
+                    throw new ArgumentNullException("entity");
+                }
+                this.Entities.Add(entity);
+                await this._context.SaveChangesAsync();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                var message = string.Empty;
+
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        message += string.Format("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage) + Environment.NewLine;
+                    }
+                }
+
+                var fail = new Exception(message, dbEx);
+                throw fail;
+            }
+        }
+
         #endregion Methods
 
         #region Properties

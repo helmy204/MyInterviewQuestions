@@ -1,8 +1,13 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+using MyInterviewQuestions.Core;
 using MyInterviewQuestions.Data;
 using MyInterviewQuestions.Service;
+using MyInterviewQuestions.WebApi.Framework;
 using System;
-
+using System.Web;
 using Unity;
+using Unity.Injection;
 using Unity.Lifetime;
 
 namespace MyInterviewQuestions.WebApi
@@ -51,8 +56,15 @@ namespace MyInterviewQuestions.WebApi
 
             // repository
             container.RegisterType(typeof(IRepository<>), typeof(EfRepository<>));
+            container.RegisterType<IIdentityRepository, IdentityRepository>();
 
-            // question
+            container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
+            container.RegisterType<IUserStore<User, int>, IdentityRepository>(new InjectionConstructor(typeof(IDbContext)));
+
+            //container.RegisterType<UserManager<User, int>, ApplicationUserManager>(new InjectionConstructor(typeof(IdentityRepository)));
+            container.RegisterType<ApplicationUserManager>();
+
+            // questions
             container.RegisterType<IQuestionService, QuestionService>();
         }
     }

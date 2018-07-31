@@ -37,6 +37,8 @@ namespace MyInterviewQuestions.Data
         /// <param name="entity">Entity</param>
         void Insert(T entity);
 
+        Task InsertAsync(T entity);
+
         /// <summary>
         /// Insert entities
         /// </summary>
@@ -60,5 +62,6 @@ namespace MyInterviewQuestions.Data
         /// </summary>
         /// <param name="entities">Entities</param>
         void Delete(IEnumerable<T> entities);
+
     }
 }
