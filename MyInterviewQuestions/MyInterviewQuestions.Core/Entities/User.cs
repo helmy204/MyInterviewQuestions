@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -18,12 +19,20 @@ namespace MyInterviewQuestions.Core
         /// <summary>
         /// Gets or sets the username
         /// </summary>
+        [Required]
         public string UserName { get; set; }
 
         /// <summary>
-        /// Gets or sets the password
+        /// Gets or sets the salted/hashed form of the user password
         /// </summary>
-        public string Password { get; set; }
+        [Required]
+        public string PasswordHash { get; set; }
+
+        /// <summary>
+        /// Gets or sets the password salt
+        /// </summary>
+        [Required]
+        public string PasswordSalt { get; set; }
 
         public virtual ICollection<Question> Questions { get; set; }
 

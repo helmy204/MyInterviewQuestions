@@ -31,6 +31,8 @@ namespace MyInterviewQuestions.Data
         /// <returns>Entity</returns>
         T GetById(object id);
 
+        //Task<T> GetByIdAsync(object id);
+
         /// <summary>
         /// Insert entitiy
         /// </summary>

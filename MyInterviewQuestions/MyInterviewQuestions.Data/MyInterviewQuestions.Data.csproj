@@ -59,6 +59,14 @@
     <Compile Include="Migrations\201807021250551_InitialCreate.Designer.cs">
       <DependentUpon>201807021250551_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807312030010_Add_PasswordHash_and_PasswardSalt_to_User.cs" />
+    <Compile Include="Migrations\201807312030010_Add_PasswordHash_and_PasswardSalt_to_User.Designer.cs">
+      <DependentUpon>201807312030010_Add_PasswordHash_and_PasswardSalt_to_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808010809281_Set_User_Required_UserName_PasswordHash_PasswordSalt.cs" />
+    <Compile Include="Migrations\201808010809281_Set_User_Required_UserName_PasswordHash_PasswordSalt.Designer.cs">
+      <DependentUpon>201808010809281_Set_User_Required_UserName_PasswordHash_PasswordSalt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyInterviewQuestionsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +84,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807021250551_InitialCreate.resx">
       <DependentUpon>201807021250551_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807312030010_Add_PasswordHash_and_PasswardSalt_to_User.resx">
+      <DependentUpon>201807312030010_Add_PasswordHash_and_PasswardSalt_to_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808010809281_Set_User_Required_UserName_PasswordHash_PasswordSalt.resx">
+      <DependentUpon>201808010809281_Set_User_Required_UserName_PasswordHash_PasswordSalt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

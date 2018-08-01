@@ -49,6 +49,11 @@ namespace MyInterviewQuestions.Data
             return this.Entities.Find(id);
         }
 
+        //public async Task<T> GetByIdAsync(object id)
+        //{
+        //    return this.Entities.Find(id);
+        //}
+
         /// <summary>
         /// Insert entitiy
         /// </summary>
@@ -190,6 +195,8 @@ namespace MyInterviewQuestions.Data
                 throw fail;
             }
         }
+
+       
 
         #endregion Methods
 

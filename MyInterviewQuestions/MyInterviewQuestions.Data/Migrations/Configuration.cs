@@ -23,7 +23,7 @@ namespace MyInterviewQuestions.Data.Migrations
 
             context.Users.AddOrUpdate(
                 u => u.Id,
-                    new User() { Id = 1, UserName = "Root", Password = "P@ssw0rd", InsertedOn = DateTime.Now }
+                    new User() { Id = 1, UserName = "Root", PasswordHash = "0994C61970E23C2A634F638469A919F6DEC56D7C",PasswordSalt= "4OflSwI=", InsertedOn = DateTime.Now }
                 );
         }
     }

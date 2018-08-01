@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using MyInterviewQuestions.Core;
+using MyInterviewQuestions.Service;
 using MyInterviewQuestions.WebApi.Framework;
 using MyInterviewQuestions.WebApi.Models;
 using System;
@@ -15,10 +16,12 @@ namespace MyInterviewQuestions.WebApi.Controllers
     public class AccountController : ApiController
     {
         private readonly ApplicationUserManager _userManager;
+        private readonly IEncryptionService _encryptionService;
 
-        public AccountController(ApplicationUserManager userManager)
+        public AccountController(ApplicationUserManager userManager,IEncryptionService encryptionService)
         {
             _userManager = userManager;
+            _encryptionService = encryptionService;
         }
 
         // /api/Account/Register
@@ -29,7 +32,11 @@ namespace MyInterviewQuestions.WebApi.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                User user = new User() { UserName = userModel.UserName, Password = userModel.Password };
+                User user = new User() { UserName = userModel.UserName };
+
+                string saltKey = _encryptionService.CreateSaltKey(5);
+                user.PasswordSalt = saltKey;
+                user.PasswordHash = _encryptionService.CreatePasswordHash(userModel.Password, saltKey);
 
                 IdentityResult result = await _userManager.CreateAsync(user);
 

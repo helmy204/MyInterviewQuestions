@@ -33,7 +33,7 @@ namespace MyInterviewQuestions.WebApi.Controllers
             }
         }
 
-        //[Authorize]
+        [Authorize]
         public List<QuestionModel> Get()
         {
             IEnumerable<Question> questions = _questionService.GetAll();

@@ -46,7 +46,25 @@ namespace MyInterviewQuestions.Data
             throw new NotImplementedException();
         }
         #endregion IUserStore
+        
+        #region IUserPasswordStore
 
+        public async Task<string> GetPasswordHashAsync(User user)
+        {
+            return user.PasswordHash;
+        }
+
+        public Task<bool> HasPasswordAsync(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetPasswordHashAsync(User user, string passwordHash)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion IUserPasswordStore
 
     }
 }

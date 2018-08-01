@@ -58,11 +58,17 @@ namespace MyInterviewQuestions.WebApi
             container.RegisterType(typeof(IRepository<>), typeof(EfRepository<>));
             container.RegisterType<IIdentityRepository, IdentityRepository>();
 
+            // authentication
             container.RegisterType<IAuthenticationManager>(new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
+
             container.RegisterType<IUserStore<User, int>, IdentityRepository>(new InjectionConstructor(typeof(IDbContext)));
+            //container.RegisterType<IUserStore<User, int>, IdentityRepository>(new InjectionConstructor(typeof(IDbContext)));
 
             //container.RegisterType<UserManager<User, int>, ApplicationUserManager>(new InjectionConstructor(typeof(IdentityRepository)));
             container.RegisterType<ApplicationUserManager>();
+
+            // security
+            container.RegisterType<IEncryptionService, EncryptionService>();
 
             // questions
             container.RegisterType<IQuestionService, QuestionService>();
